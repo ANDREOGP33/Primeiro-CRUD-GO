@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 
-	"github.com/ANDREOGP33/Primeiro-CRUD-GO/tree/main/src/configuration/database/mongodb"
 	"github.com/ANDREOGP33/Primeiro-CRUD-GO/tree/main/src/configuration/logger"
 	"github.com/ANDREOGP33/Primeiro-CRUD-GO/tree/main/src/controller"
 	"github.com/ANDREOGP33/Primeiro-CRUD-GO/tree/main/src/controller/routes"
@@ -19,7 +18,6 @@ func main() {
 		log.Fatal("Error loading .env file")
 	}
 
-	mongodb.InitCollection()
 	//init dependeces
 	service := service.NewUserDomainService()
 	userController := controller.NewUserControllerInterface(service)
